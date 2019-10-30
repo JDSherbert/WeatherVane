@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - MetalCube
+  - SandCube
+  - DirtCube
+  - GrassCube
+  - MudCube
+  - JellyCube
+  - IceCube
+  - LavaCube
+  - TNTCube
+  - WeatherGene_Sun
+  - WeatherGene_Rain
+  - WeatherGene_Snow
+  - WeatherGene_Thunder
+  - WeatherGene_Hurricane
+  - WeatherGene_Earthquake
+  - WeatherGene_Meteor
+  - SolarPanelCube
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - PlayableArea
+  - Scenery
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
