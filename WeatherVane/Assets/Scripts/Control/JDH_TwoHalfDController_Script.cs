@@ -68,6 +68,7 @@ public class JDH_TwoHalfDController_Script : MonoBehaviour
         GetInput();
         Movement();
         Jump();
+        Cheat();
 
     }
 
@@ -75,7 +76,7 @@ public class JDH_TwoHalfDController_Script : MonoBehaviour
     { 
         if(cheat.flyingUsagi == true)
         {
-            return true;
+            return false;
         }
         else
         {
@@ -87,7 +88,7 @@ public class JDH_TwoHalfDController_Script : MonoBehaviour
             }
             else
             {
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1, Color.green);
                 return false;
             }
         }
@@ -112,8 +113,9 @@ public class JDH_TwoHalfDController_Script : MonoBehaviour
     {
         if (Mathf.Abs(inputSetting.horizontalInput) > inputSetting.inputDelay)
         {
+            
             //Move Player
-            playerData.player.transform.Translate
+            playerData.player.transform.position +=
                 (Vector3.right
                 * Time.deltaTime
                 * inputSetting.horizontalInput
@@ -159,8 +161,35 @@ public class JDH_TwoHalfDController_Script : MonoBehaviour
 
         if (CanJump() == true && inputSetting.jumpInput > 0)
         {
-            playerData.playerRB.AddForce(0, inputSetting.jumpInput * controlSetting.jumpHeight, 0, ForceMode.Impulse);  
+            playerData.playerRB.velocity += inputSetting.jumpInput * controlSetting.jumpHeight * Vector3.up;
+            //playerData.playerRB.AddForce(0, inputSetting.jumpInput * controlSetting.jumpHeight, 0, ForceMode.Impulse);  
         }
 
+    }
+    public void Cheat()
+    {
+        float gravMultiplier_Temp = controlSetting.gravityMultiplier;
+
+
+        if (cheat.flyingUsagi == true)
+        {
+            playerData.playerRB.useGravity = !cheat.flyingUsagi;
+            controlSetting.gravityMultiplier = 0;
+
+            //Fly Player
+            if(inputSetting.verticalInput != 0)
+            {
+                playerData.player.transform.position += 
+               (Vector3.up
+               *Time.deltaTime
+               * inputSetting.verticalInput
+               * controlSetting.movementSpeed); ;
+            }
+        }
+        else if(cheat.flyingUsagi == false)
+        {
+            playerData.playerRB.useGravity = !cheat.flyingUsagi;
+            controlSetting.gravityMultiplier = gravMultiplier_Temp;
+        }
     }
 }

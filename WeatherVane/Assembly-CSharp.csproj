@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\Control\JDH_TwoHalfDController_Script.cs" />
     <Compile Include="Assets\Scripts\Control\JDH_WeatherAbilities_Script.cs" />
     <Compile Include="Assets\Scripts\Environmental\JDH_IceDispenser_Script.cs" />
+    <Compile Include="Assets\Scripts\JDH_Alternation_Script.cs" />
     <Compile Include="Assets\Scripts\JDH_DNA_Script.cs" />
     <Compile Include="Assets\Scripts\JDH_FanBlade_Script.cs" />
     <Compile Include="Assets\Scripts\JDH_IceCube_Script.cs" />
