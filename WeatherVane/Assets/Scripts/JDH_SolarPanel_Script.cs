@@ -15,6 +15,7 @@ public class JDH_SolarPanel_Script : MonoBehaviour
     {
         public AudioSource audioSource;
         public AudioClip audioClip;
+        public Collider trigger;
         public Light light;
         public float powerupVolume = 0.7f;
         public bool isON = false;
@@ -38,6 +39,13 @@ public class JDH_SolarPanel_Script : MonoBehaviour
         else
         {
             
+        }
+    }
+    public void OnTriggerEnter(Collider triggerObj)
+    {
+        if(triggerObj.name == "Sun")
+        {
+            solarcube.isON = true;
         }
     }
 }
