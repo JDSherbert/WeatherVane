@@ -12,7 +12,7 @@
   -----------------------------------------------------------------------
   
   <a href="https://youtu.be/7T0iBs5Gbaw"> 
-    <img align="top" alt="View Trailer"  src="https://img.shields.io/badge/View%20Trailer%20-#FF0000.svg?style=for-the-badge&logo=Youtube&logoColor=white&color=black&labelColor=#FF0000"> </a>
+    <img align="top" alt="View Trailer"  src="https://img.shields.io/badge/View%20Trailer%20-%23FF0000.svg?style=for-the-badge&logo=Youtube&logoColor=white&color=black&labelColor=%23FF0000"> </a>
   
   
   -----------------------------------------------------------------------
